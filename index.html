@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="">
 
 <head>
   <meta charset="UTF-8">
@@ -11,80 +11,87 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
   <header> <!-- Cabeçalho -->
-    <nav> <!-- Estrutura p/ Menu -->
-      <ul>
-        
-        <li>
-          <a href="">
-            <span>Home</span>
+    <nav class="menu-desktop"> <!-- Menu Desktop -->
+      <ul class="menu menu-principal">
+
+        <li class="menu-item">
+          <a href="" class="menu-link">
+            <span class="menu-text">Home</span>
           </a>
         </li>
 
-        <li>
-          <a href="">
-            <span>Projetos</span>
+        <li class="menu-item">
+          <a href="" class="menu-link">
+            <span class="menu-text">Projetos</span>
           </a>
         </li>
 
-        <li>
-          <a href="">
-            <span>Sobre</span>
+        <li class="menu-item">
+          <a href="" class="menu-link">
+            <span class="menu-text">Sobre</span>
           </a>
         </li>
 
-        <li>
-          <a href="">
-            <span>Contato</span>
+        <li class="menu-item">
+          <a href="" class="menu-link">
+            <span class="menu-text">Contato</span>
           </a>
         </li>
 
       </ul>
     </nav>
 
-    <!-- Trocar Cor Tema // Shift + ALT + A -->
-    <div>
-      <!-- Icone Moon -->
-      <i class="bi bi-moon-stars"></i>
+    <!-- Trocar Cor Tema // -->
+    <div class="header-toggle">
+      <!-- Icone SOL -->
+      <i class="bi bi-sun" id="toggleTheme"></i>
 
-      <!-- Botão Mobile -->
+      <button id="menuHamburger" class="btn-menu-mobile">
+         <!-- Botão Mobile -->
       <i class="bi bi-list"></i>
+      </button>
+      
+     
     </div>
 
   </header>
 
   <!-- Estrutura Menu Mobile -->
-  <nav>
-    <ul>
-      <li>
-        <a href="">
-          <span>Home</span>
+  <nav class="menu-mobile menu menu-principal" id="menuMobile">
+    <ul class="menu-list">
+
+      <li class="menu-item">
+        <a href="" class="menu-link">
+          <span class="menu-text">Home</span>
         </a>
       </li>
 
-      <li>
-        <a href="">
-          <span>Projetos</span>
+      <li class="menu-item">
+        <a href="" class="menu-link">
+          <span class="menu-text">Projetos</span>
         </a>
       </li>
 
-      <li>
-        <a href="">
-          <span>Sobre</span>
+      <li class="menu-item">
+        <a href="" class="menu-link">
+          <span class="menu-text">Sobre</span>
         </a>
       </li>
 
-
-      <li>
-        <a href="">
-          <span>Contato</span>
+      <li class="menu-item">
+        <a href="" class="menu-link">
+          <span class="menu-text">Contato</span>
         </a>
       </li>
 
     </ul>
   </nav>
+
+  <script src="script.js"></script>
 
 </body>
 
