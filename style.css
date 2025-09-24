@@ -158,6 +158,10 @@ Botão menu mobile */
     align-items: center;
 }
 
+#home{
+    padding: 3.5rem 1rem;
+}
+
 /* Medidas responsivas */
 @media (min-width: 768px) {
     .menu-desktop {
