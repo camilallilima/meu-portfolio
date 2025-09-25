@@ -4,19 +4,29 @@
 /* Raíz */
 :root,
 :root[data-theme='dark'] {
-    --cor-fundo: #121212;          /* Fundo escuro */
-    --cor-texto: #e0e0e0;          /* Texto claro */
-    --menu-link: #bb86fc;          /* Links em tom lilás */
-    --menu-destaque: #3700b3;      /* Destaque no menu */
-    --cor-borda: #333333;          /* Cor da borda no escuro */
+    --cor-fundo: #121212;
+    /* Fundo escuro */
+    --cor-texto: #e0e0e0;
+    /* Texto claro */
+    --menu-link: #bb86fc;
+    /* Links em tom lilás */
+    --menu-destaque: #3700b3;
+    /* Destaque no menu */
+    --cor-borda: #333333;
+    /* Cor da borda no escuro */
 }
 
 :root[data-theme='light'] {
-    --cor-fundo: #f4f4f4;          /* Fundo claro */
-    --cor-texto: #121212;          /* Texto escuro */
-    --menu-link: #661dce;          /* Links em tom roxo */
-    --menu-destaque: #3700b3;      /* Destaque no menu */
-    --cor-borda: #cccccc;          /* Cor da borda no claro */
+    --cor-fundo: #f4f4f4;
+    /* Fundo claro */
+    --cor-texto: #121212;
+    /* Texto escuro */
+    --menu-link: #661dce;
+    /* Links em tom roxo */
+    --menu-destaque: #3700b3;
+    /* Destaque no menu */
+    --cor-borda: #cccccc;
+    /* Cor da borda no claro */
 }
 
 /* Inverter Cor Logo = Filtro */
@@ -30,6 +40,7 @@ html[data-theme='light'] .logo {
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -56,19 +67,24 @@ header {
     align-items: center;
     width: 100%;
     background: var(--cor-fundo);
-    border-bottom: 5px solid var(--cor-borda);
+    border-bottom: 2px solid var(--cor-borda);
+    position: fixed;
+    z-index: 9999;
+    padding: .5rem 1rem;
 }
 
 .menu-desktop {
-    
+
     display: none;
     /* Esconde o menu desktop */
 }
 
 /* NAV = UL */
 .menu {
-    display: flex; /* em linha // horizontal */
-    gap: 2rem; /* 16px */
+    display: flex;
+    /* em linha // horizontal */
+    gap: 1rem;
+    /* 16px */
     align-items: center;
 }
 
@@ -82,9 +98,9 @@ header {
     align-items: center;
 }
 
-.menu-text{
+.menu-text {
     color: var(--menu-link);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
 }
 
@@ -107,7 +123,8 @@ Botão menu mobile */
     padding: 0.5rem;
 }
 
-.menu-mobile { /* NAV */
+.menu-mobile {
+    /* NAV */
     position: fixed;
     top: 0;
     right: 0;
@@ -119,7 +136,7 @@ Botão menu mobile */
     display: flex;
     flex-direction: column;
     padding-top: 4rem;
-    transition: .3s ease-in-out; 
+    transition: .3s ease-in-out;
     transform: translateX(100%);
 }
 
@@ -128,10 +145,15 @@ Botão menu mobile */
     transform: translateX(0%);
 }
 
-.menu-mobile /* Nav */
-.menu-list /* Ul */{
+.menu-mobile
+/* Nav */
+.menu-list
+
+/* Ul */
+    {
     display: flex;
-    flex-direction: column; /* EIXO Y = Vertical */
+    flex-direction: column;
+    /* EIXO Y = Vertical */
     gap: 1rem;
     width: 100%;
     padding: 1rem 1rem 2rem;
@@ -139,17 +161,18 @@ Botão menu mobile */
 
 .menu-mobile .menu-item {
     width: 100%;
+    text-align: center;
 }
 
-.menu-mobile .menu-link{
+.menu-mobile .menu-link {
     padding: 0.5rem 0;
     display: inline-block;
     font-size: 1rem;
 }
 
 .logo {
-    width: 4.10rem ;
-    height: 2.40rem;
+    width: 3.25rem;
+    height: auto;
 }
 
 .header-toggle {
@@ -158,8 +181,20 @@ Botão menu mobile */
     align-items: center;
 }
 
-#home{
-    padding: 3.5rem 1rem;
+#home {
+    padding: 4.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
 }
 
 /* Medidas responsivas */
@@ -169,11 +204,35 @@ Botão menu mobile */
         min-width: 30%;
     }
 
-    .btn-menu-mobile{
-        display:none
+    .btn-menu-mobile {
+        display: none
     }
 
-    .header-toggle{
+    .header-toggle {
         min-width: 30%;
+    }
+
+    header {
+        padding: 1rem 6rem;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    #home {
+        padding: 8rem 6rem 4rem 6rem;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (min-width: 1400px) {
+    h1 {
+        font-size: 6.5rem;
     }
 }
