@@ -1,54 +1,55 @@
+
+
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Permanent+Marker&family=Shadows+Into+Light&display=swap');
+
 /* CSS Externo */
 
-/* Definir */
-/* Raíz */
-:root,
-:root[data-theme='dark'] {
-    --cor-fundo: #121212;
-    /* Fundo escuro */
-    --cor-texto: #e0e0e0;
-    /* Texto claro */
-    --menu-link: #bb86fc;
-    /* Links em tom lilás */
-    --menu-destaque: #3700b3;
-    /* Destaque no menu */
-    --cor-borda: #333333;
-    /* Cor da borda no escuro */
+/* Definir as cores Tema Dark */
+/* raiz */
+:root {
+  --azul-pastel: #AEE2FF;
+  --branco-neve: #FFFFFF;
+  --rosa-algodao: #FFD6E8;
+  --lilas-lavanda: #E6CCFF;
+  --amarelo-baunilha: #FFF6C2;
+  --azul-bebe: #C7E9FB;
 }
+   
 
+/* Fundo Branco */
 :root[data-theme='light'] {
-    --cor-fundo: #f4f4f4;
-    /* Fundo claro */
-    --cor-texto: #121212;
-    /* Texto escuro */
-    --menu-link: #661dce;
-    /* Links em tom roxo */
-    --menu-destaque: #3700b3;
-    /* Destaque no menu */
-    --cor-borda: #cccccc;
-    /* Cor da borda no claro */
+    --cor-fundo: #0018b4;
+    --cor-texto: #000000;
+    --menu-link: #000000;
+
+    --cor-borda: #000000;
+
+    --fundo-gradiente: linear-gradient(#003fb4, #001589, #0c006b, #190048, #190048,  #250048);
+
 }
 
-/* Inverter Cor Logo = Filtro */
+/* Inverter Cor LOGO = Filtro */
 html[data-theme='light'] .logo {
     filter: invert(1);
 }
 
-/* Reset CSS = Padronizar */
+/* Reset CSS - padronizar */
 /* Seletor Universal */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 body {
-    background: var(--cor-fundo);
-    /* Cor fundo */
+    background: var(--fundo-gradiente);
+    
+    /* cor fundo */
     color: var(--cor-texto);
-    /* Cor Textos */
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* cor TEXTOS */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 a {
@@ -58,7 +59,7 @@ a {
 
 ul {
     list-style: none;
-    /* Estilo de lista */
+    /* Estilo de Lista */
 }
 
 header {
@@ -69,17 +70,20 @@ header {
     background: var(--cor-fundo);
     border-bottom: 2px solid var(--cor-borda);
     position: fixed;
+    /* Voltar */
     z-index: 9999;
+    /* Camadas */
     padding: .5rem 1rem;
 }
 
 .menu-desktop {
-
+    background: var(--cor-fundo);
     display: none;
-    /* Esconde o menu desktop */
+    /* esconde o menu desktop */
+
 }
 
-/* NAV = UL */
+/* NAV = UL // OL */
 .menu {
     display: flex;
     /* em linha // horizontal */
@@ -88,7 +92,7 @@ header {
     align-items: center;
 }
 
-/* LI = Listas */
+/* LI = listas */
 .menu-item {
     width: 100%;
 }
@@ -104,15 +108,15 @@ header {
     text-transform: uppercase;
 }
 
-/* Menu Hamburger
-Botão menu mobile */
+/*--- Menu Hamburger
+botao menu mobile  ----- */
 
 #menuHamburger {
     margin-left: 1rem;
 }
 
 .btn-menu-mobile {
-    background-color: transparent;
+    background: transparent;
     border: none;
     cursor: pointer;
     color: var(--cor-texto);
@@ -131,12 +135,14 @@ Botão menu mobile */
     background: var(--cor-fundo);
     width: 75%;
     height: 100vh;
+    /* viewPort Altura */
     border-left: 1px solid var(--cor-borda);
     max-width: 320px;
     display: flex;
     flex-direction: column;
-    padding-top: 4rem;
+    padding-top: 8rem;
     transition: .3s ease-in-out;
+    /* voltar aqui */
     transform: translateX(100%);
 }
 
@@ -146,10 +152,10 @@ Botão menu mobile */
 }
 
 .menu-mobile
-/* Nav */
+/* nav */
 .menu-list
 
-/* Ul */
+/* UL */
     {
     display: flex;
     flex-direction: column;
@@ -171,8 +177,10 @@ Botão menu mobile */
 }
 
 .logo {
-    width: 3.25rem;
+    width: 2.5rem;
+    /* comprimento */
     height: auto;
+    /* altura */
 }
 
 .header-toggle {
@@ -182,9 +190,10 @@ Botão menu mobile */
 }
 
 #home {
-    padding: 4.5rem 1rem;
+    padding: 7.5rem 1rem;
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
 }
 
 .main-content {
@@ -195,21 +204,131 @@ Botão menu mobile */
 
 h1 {
     font-size: 2.5rem;
+    font-family: "Caveat", cursive;
 }
 
-/* Medidas responsivas */
+h2 {
+    font-family: "Permanent Marker", cursive;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+h3 {
+    font-size: 1.55rem;
+    font-family: "Shadows Into Light", cursive;font-weight: 900;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.video iframe {
+    aspect-ratio: 16/9;
+}
+
+#home,
+.filmes,
+.sobre,
+.contato {
+    padding: 2.5rem 1rem;
+}
+
+.descricao-video {
+    display: flex;
+    flex-direction: column;
+    padding: 6.25rem 2rem 2rem;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    margin-top: -7.5rem;
+}
+
+.descricao-video h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-top: -2rem;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+}
+
+.filmes {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.filmes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.filmes-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.img-card {
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+/* H3  */
+.card-titulo {
+    color: var(--cor-texto);
+    /* Cor do Texto */
+    font-size: 2rem;
+    /* Tamanho texto */
+    font-weight: 400;
+    /* largura das letras */
+    font-family: "Inter", sans-serif;
+    /* Estilo das fontes */
+    
+}
+
+.card-descricao {
+    color: var(--cor-texto);
+    font-family: "Inter", sans-serif;
+}
+
+.card-item {
+    margin-bottom: .8rem;
+}
+
+.card-item i {
+    margin-right: 8px;
+}
+
+/* Medidas Responsivas */
+@media (max-width: 768px) { 
+    #home {
+        padding-top: 8rem;
+    }
+}
+
 @media (min-width: 768px) {
+    
     .menu-desktop {
         display: flex;
-        min-width: 30%;
+        min-width: 30%; /* alinhar o logo */
     }
 
     .btn-menu-mobile {
-        display: none
+        display: none;
     }
 
     .header-toggle {
-        min-width: 30%;
+        min-width: 30%; /* alinhar o logo */
     }
 
     header {
@@ -220,7 +339,16 @@ h1 {
         font-size: 5rem;
     }
 
-    #home {
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+    #home, 
+    .filmes,
+    .sobre {
         padding: 8rem 6rem 4rem 6rem;
     }
 
@@ -229,10 +357,50 @@ h1 {
         flex-direction: column;
         align-items: flex-start;
     }
+}/* Fim min 768px */
+
+@media (min-width: 992px) {
+    .filmes-card {
+        flex-direction: row;
+    }
+    .img-card {
+         /* Tamanho das fotos */
+        width: 55%;
+    }
+    .reverse-card{
+        /* Espelhar */
+        flex-direction: row-reverse;
+    }
+
+
+
+    .img-card2 {
+        width: 30%;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    h2 {
+        font-size: 3rem;
+    }
 }
 
 @media (min-width: 1400px) {
     h1 {
         font-size: 6.5rem;
+    }
+    h2 {
+        font-size: 4.5rem;
+    }
+
+    h3 {
+        font-size: 3.25rem
+    }
+
+    .descricao-video,
+    .filmes,
+    .sobre {
+        padding: 10rem 15rem 4rem;
     }
 }
